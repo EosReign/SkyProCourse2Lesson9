@@ -16,7 +16,7 @@ public class EmployeeController {
     public String hello() {
         return "<span><b>Welcome to Calculator!</b><span><br>";
     }
-
+// Как тут встраивать RequestMapping правильно? а то я пытаюсь его встроить, но он игнорируется
     @GetMapping(path = "/department/max-salary")
     public String maxSalary(@RequestParam("departmentId") int department) throws Exception {
         if (department <= 5 && department > 0) {
@@ -48,8 +48,5 @@ public class EmployeeController {
     public String allEmployeers() {
         return employeeService.getAllEmployeers();
     }
-
-
-
-
 }
+//p;
